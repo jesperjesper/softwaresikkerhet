@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{{ product.name }}</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <p>Price: ${{ product.price }}</p>
+
+    <h2>Reviews</h2>
+    {% for review in product.reviews %}
+        <div class="review">
+            <p>{{ review.content|tojson|safe }}</p>
+        </div>
+    {% endfor %}
+    
+
+    <h2>Add a review</h2>
+    <form method="post" action="">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.content.label }}
+            {{ form.content(size=20) }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</body>
+</html>

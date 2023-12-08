@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Simple Web Store</title>
+</head>
+<body>
+    <h1>the store</h1>
+    <div class="product-list">
+        {% for product in products %}
+            <div class="product">
+                <h3><a href="{{ url_for('product', product_id=product.id) }}">{{ product.name }}</a></h3>
+                <p>Price: ${{ product.price }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('add_product') }}">Add a Product</a>
+    <div>
+        <p>Not a member yet? <a href="{{ url_for('register') }}">Register here</a>.</p>
+        <p>Already a member? <a href="{{ url_for('login') }}">Log in here</a>.</p>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Simple Web Store</title>
+</head>
+<body>
+    <h1>the store</h1>
+    <div class="product-list">
+        {% for product in products %}
+            <div class="product">
+                <h3><a href="{{ url_for('product', product_id=product.id) }}">{{ product.name }}</a></h3>
+                <p>Price: ${{ product.price }}</p>
+            </div>
+        {% endfor %}
+    </div>
+        <a href="{{ url_for('add_product') }}">Add a Product</a>
+    </div>
+    
+    <a href="{{ url_for('user') }}">User Page</a>
+
+    <a href="{{ url_for('logout') }}">Logout</a></p>
+    
+
+    <div>
+        <p>Not a member yet? <a href="{{ url_for('register') }}">Register here</a>.</p>
+        <p>Already a member? <a href="{{ url_for('login') }}">Log in here</a>.</p>
+    </div>
+</body>
+</html>

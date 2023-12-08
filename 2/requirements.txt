@@ -1,0 +1,11 @@
+Flask
+Flask-WTF
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Bcrypt
+Flask-Login
+Flask-Session
+Flask-Limiter
+pyopt
+Flask-Security
+#bruk session for å logge inn
