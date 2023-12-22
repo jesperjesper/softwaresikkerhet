@@ -1,0 +1,5 @@
+The intranet level 1 login form is vulnerable to sql injections. By replacing the password with:
+' or 1=1#
+One can access the next step
+
+

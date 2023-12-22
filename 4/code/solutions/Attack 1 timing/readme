@@ -1,0 +1,6 @@
+The login form is vulnerable to timing attacks because the function that checks the password exits early if it discovers a charecter that doesn't match the password. The python code in the file timingcrack.py abuses this timing vulnerability to discover the password.
+
+
+
+
+
